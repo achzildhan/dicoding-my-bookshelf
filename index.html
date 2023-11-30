@@ -59,11 +59,6 @@
   <main>
     <section class="search-container">
       <input id="search-book-title" class="search" type="search" placeholder="Search Book by Title">
-      <select id="optional-search" class="select">
-        <option value="All">All</option>
-        <option value="Finished Read">Finished Read</option>
-        <option value="Unfinished Read">Unfinished Read</option>
-      </select>
     </section>
     <section class="main-content">
       <div class="profile-add">
@@ -74,14 +69,8 @@
           <h2 class="user-name">Raden Achmad Zildhan Frans Bestand</h2>
           <p class="user-bio">
             <i class="fa-regular fa-user"></i>
-            Web and Data Enthusiast
+            Web Developer and Data Enthusiast
           </p>
-          <ul>
-            <li>
-              <p>Total Books</p>
-              <h4 id="jumlah-buku">0</h4>
-            </li>
-          </ul>
         </div>
         <div class="button-add">
           <button id="add-book" type="button" name="add-new-book">
@@ -98,11 +87,49 @@
         <div class="content-book">
           <div class="book-shelf">
             <h4 class="title">Unfinished Read</h4>
-            <div class="book-list" id="unfinished-book-list"></div>
+            <div class="book-list" id="unfinished-book-list">
+              <!-- <article class="card">
+                <div class="card-img">
+                  <img id="book-image" src="assets/images/notDoneRead.png" alt="Not Done Read Doodle" class="book-img">
+                </div>
+                <div class="card-body">
+                  <div class="content">
+                    <h3>Salma Izzatul Islam</h3>
+                    <p>Nur Muhammad Himawan</p>
+                    <p>2022</p>
+                    <h4>Historical Fiction</h4>
+                  </div>
+                  <div class="action">
+                    <button type="button" class="done"><i class="fa-regular fa-circle-check"></i></button>
+                    <button type="button" class="edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button type="button" class="delete"><i class="fa-solid fa-trash"></i></button>
+                  </div>
+                </div>
+              </article> -->
+            </div>
           </div>
           <div class="book-shelf">
             <h4 class="title">Finished Read</h4>
-            <div class="book-list" id="finished-book-list"></div>
+            <div class="book-list" id="finished-book-list">
+              <!-- <article class="card">
+                <div class="card-img">
+                  <img id="book-image" src="assets/images/doneRead.png" alt="Done Read Doodle" class="book-img">
+                </div>
+                <div class="card-body">
+                  <div class="content">
+                    <h3>Salma Izzatul Islam</h3>
+                    <p>Nur Muhammad Himawan</p>
+                    <p>2022</p>
+                    <h4>Historical Fiction</h4>
+                  </div>
+                  <div class="action">
+                    <button type="button" class="undo"><i class="fa-solid fa-rotate-right"></i></button>
+                    <button type="button" class="edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button type="button" class="delete"><i class="fa-solid fa-trash"></i></button>
+                  </div>
+                </div>
+              </article> -->
+            </div>
           </div>
         </div>
       </div>
@@ -110,27 +137,27 @@
     <section id="form-book">
       <div class="input-section">
           <div class="title-input">
-              <h2>Add New Book</h2>
-              <span id="close"><i class="fa-solid fa-xmark"></i></span>
+            <h2 class="title-form">Add New Book</h2>
+            <span id="close"><i class="fa-solid fa-xmark"></i></span>
           </div>
           <form id="input-book">
-              <div class="input">
-                  <input id="input-book-title" class="required" type="text" placeholder="Title" required />
-              </div>
-              <div class="input">
-                  <input id="input-book-author" class="required" type="text" placeholder="Author" required />
-              </div>
-              <div class="input">
-                  <input id="input-book-year" class="required" type="number" placeholder="Year" required />
-              </div>
-              <div class="input">
-                  <input id="input-book-category" class="required" type="text" placeholder="Category" required />
-              </div>
-              <div class="input-inline">
-                  <input id="input-book-is-complete" type="checkbox" />
-                  <label for="input-book-is-complete">Finished Reading</label>
-              </div>
-              <button id="bookSubmit" type="submit">Add Book</button>
+            <div class="input">
+              <input id="input-book-title" class="required" type="text" placeholder="Title" required>
+            </div>
+            <div class="input">
+              <input id="input-book-author" class="required" type="text" placeholder="Author" required>
+            </div>
+            <div class="input">
+              <input id="input-book-year" class="required" type="number" placeholder="Year" required>
+            </div>
+            <div class="input">
+              <input id="input-book-category" class="required" type="text" placeholder="Category" required>
+            </div>
+            <div class="input-inline">
+              <input id="input-book-is-complete" type="checkbox">
+              <label for="input-book-is-complete">Finished Reading</label>
+            </div>
+            <button id="book-submit" type="submit">Add Book</button>
           </form>
       </div>
   </section>
@@ -139,34 +166,34 @@
   <footer>
     <div class="footer-container">
       <ul>
-        <li>
-          <p>✨</p>
-        </li>
-        <li>
+        <li style="order: 2">
           <i class="fa-brands fa-github"></i>
           <span class="footer-title">
-            <a href="">zildhanfb08</a>
+            <a href="https://github.com/zildhanfb08/">zildhanfb08</a>
           </span>
         </li>
-        <li>
+        <li style="order: 3">
           <i class="fa-brands fa-linkedin"></i>
           <span class="footer-title">
-            <a href="">Raden Achmad Zildhan Frans Bestand</a>
+            <a href="https://www.linkedin.com/in/raden-achmad-zildhan-fb/">Raden Achmad Zildhan FB</a>
           </span>
         </li>
-        <li>
+        <li style="order: 4">
           <i class="fa-brands fa-instagram"></i>
           <span class="footer-title">
-            <a href="">razfb05</a>
+            <a href="https://instagram.com/razfb05">razfb05</a>
           </span>
         </li>
-        <li>
+        <li style="order: 5">
           <i class="fa-brands fa-twitter"></i>
           <span class="footer-title">
-            <a href="">achzil08</a>
+            <a href="https://twitter.com/achzil08">achzil08</a>
           </span>
         </li>
-        <li>
+        <li style="order: 1">
+          <p>✨</p>
+        </li>
+        <li style="order: 6">
           <p>✨</p>
         </li>
       </ul>
@@ -174,5 +201,12 @@
   </footer>
     
   <script src="scripts/slider.js"></script>
+  <script src="scripts/webStorage.js"></script>
+  <script src="scripts/formBook.js"></script>
+  <script src="scripts/search.js"></script>
+  <script src="scripts/addAndNewBook.js"></script>
+  <script src="scripts/isFinish.js"></script>
+  <script src="scripts/funcIcon.js"></script>
+
 </body>
 </html>

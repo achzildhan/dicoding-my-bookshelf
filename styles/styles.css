@@ -174,7 +174,7 @@ main {
 .search {
   background-color: var(--bg-second);
   font-size: 0.9rem;
-  flex-basis: 70%;
+  flex-basis: 100%;
   padding: 1rem;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
   border-radius: 1rem;
@@ -183,14 +183,37 @@ main {
 .search::placeholder {
   color: var(--font-main);
 }
-.select {
-  background-color: var(--bg-second);
-  font-size: 0.9rem;
-  flex-basis: 25%;
-  padding: 1rem;
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
-  border-radius: 1rem;
-  color: var(--font-main);
+@media only screen and (max-width:1115px) {
+  .search-container {
+      width: 80%;
+  }
+}
+
+@media only screen and (max-width:960px) {
+  .search-container {
+      width: 80%;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .search-container > .search {
+      width: 65%;
+  }
+}
+
+@media only screen and (max-width:560px) {
+  .search-container {
+      flex-direction: column;
+      height: auto;
+  }
+
+  .search-container > .search {
+      width: 100%;
+  }
+
+  .search-container > .search > input {
+      padding-left: 70px;
+  }
 }
 /* Search Design */
 
@@ -304,3 +327,373 @@ main {
   color: var(--font-main);
   font-weight: 300;
 }
+/* Welcome Design */
+
+/* Overlay Add Book */
+#form-book {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.input-section {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 16px;
+  color: var(--font-main);
+  border: 2px solid var(--bg-second);
+  border-radius: 20px;
+  background-color: var(--bg-main);
+  box-shadow: 0px 0px 10px 1px var(--bg-second);
+}
+.input-section .title-input {
+  position: relative;
+}
+.input-section .title-input .title-form {
+  color:var(--font-main);
+}
+.input-section .title-input #close {
+  position: absolute;
+  padding: 0 0.7rem;
+  top: -10px;
+  right: 0px;
+  border: none;
+  outline: none;
+  font-size: 35px;
+  color: var(--font-main);
+  cursor: pointer;
+}
+.input-section .title-input #close:hover {
+  color: var(--bg-main);
+  border-radius: 10rem;
+  background-color: var(--font-main);
+  transition: 0.2s ease-out;
+}
+.input-section .title-input h2 {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 10px auto 15px;
+}
+.input-section form {
+  margin-bottom: 15px;
+}
+.input-section form .input input {
+  display: block;
+  width: 95%;
+  font-size: 1rem;
+  height: 60px;
+  margin: 20px auto;
+  border: none;
+  outline: none;
+  border: 1px solid var(--bg-third);
+  color: var(--bg-second);
+  border-radius: 15px;
+  padding: 0 20px;
+}
+.input-section form .input input::placeholder {
+  color: var(--bg-second);
+}
+.input-section form .input input:focus {
+  outline: none;
+  border-color: var(--bg-third);
+  box-shadow: 0 0 7px var(--bg-third);
+  transition: 0.2s;
+}
+.input-section form .input-inline {
+  width: 95%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+}
+.input-section form .input-inline input {
+  margin-left: 5px;
+}
+.input-section form .input-inline label {
+  color: var(--font-second);
+  font-weight: 500;
+  margin-left: 10px;
+}
+.input-section form button {
+  background-color: var(--font-main);
+  border: 1.5px solid var(--bg-second);
+  color: var(--bg-second);
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+  width: 95%;
+  padding: 10px;
+  cursor: pointer;
+}
+.input-section form button:hover {
+  color: var(--font-main);
+  background-color: var(--bg-second);
+  transition: all 0.3s;
+}
+@media only screen and (max-width:1115px) {
+  .input-section {
+      width: 40%;
+  }
+}
+@media only screen and (max-width:830px) {
+  .input-section {
+      width: 50%;
+  }
+}
+@media only screen and (max-width:600px) {
+  .input-section {
+      width: 60%;
+  }
+}
+@media only screen and (max-width:600px) {
+  .input-section .title-input h2 {
+      margin: 30px auto 15px;
+  }
+
+  .input-section .title-input #close {
+      position: absolute;
+      top: -15px;
+      right: 100px;
+  }
+}
+/* Overlay Add Book */
+
+/* Content Book */
+.content-book {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.book-shelf > h4 {
+  text-transform: uppercase;
+  text-decoration:overline;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px var(--bg-third);
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+.book-shelf .book-list {
+  width: 100%;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.book-shelf .book-list .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 1rem;
+  flex-basis: 300px;
+  border-radius: 15px;
+  background-color: var(--font-main);
+  border: 1px solid var(--font-main);
+  box-shadow: 0px 0px 6px 1px var(--font-second);
+}
+
+.book-shelf .book-list .card .card-img {
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px 15px 0 0;
+}
+
+.book-shelf .book-list .card .card-img img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.book-shelf .book-list .card .card-body {
+  display: flex;
+  color: var(--bg-second);
+  flex-direction: column;
+  padding: 10px 15px 15px 15px;
+  width: 100%;
+}
+
+.book-shelf .book-list .card .card-body .content h3,
+p {
+  margin-bottom: 3px;
+}
+.book-shelf .book-list .card .card-body .content h4 {
+  font-style: italic;
+}
+.book-shelf .book-list .card .card-body .action {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px auto;
+  align-items: center;
+}
+
+.book-shelf .book-list .card .card-body .action button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--font-main);
+  padding: 5px 15px;
+}
+
+.book-shelf .book-list .card .card-body .action .done {
+  border: 1px solid #19b82b;
+  border-radius: 10px;
+  color: #19b82b;
+}
+
+.book-shelf .book-list .card .card-body .action .done:hover {
+  background-color: #19b82b;
+  color: var(--font-main);
+}
+
+.book-shelf .book-list .card .card-body .action .edit {
+  border: 1px solid #0d6efd;
+  border-radius: 10px;
+  color: #0d6efd;
+}
+
+.book-shelf .book-list .card .card-body .action .edit:hover {
+  background-color: #0d6efd;
+  color: var(--font-main);
+}
+
+.book-shelf .book-list .card .card-body .action .undo {
+  border: 1px solid #ffc107;
+  border-radius: 10px;
+  color: #ffc107;
+}
+
+.book-shelf .book-list .card .card-body .action .undo:hover {
+  background-color: #ffc107;
+  color: var(--font-main);
+}
+
+.book-shelf .book-list .card .card-body .action .delete {
+  border: 1px solid #db2828;
+  border-radius: 10px;
+  color: #db2828;
+}
+
+.book-shelf .book-list .card .card-body .action .delete:hover {
+  background-color: #db2828;
+  color: var(--font-main);
+}
+
+@media only screen and (max-width:1115px) {
+
+  /* styles for browsers max 115px; */
+  .content-book {
+      width: 80%;
+      margin: auto;
+  }
+
+  .book-shelf .book-list .card {
+      margin: 0px 20px 50px;
+  }
+}
+
+@media only screen and (max-width:960px) {
+  .content-book {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .book-shelf {
+      width: 100%;
+  }
+
+  .book-shelf .book-list {
+      justify-content: center;
+  }
+
+  .book-shelf .book-list .card {
+      margin: 0px 40px 50px;
+  }
+}
+
+/* Content Book */
+
+/* Footer */
+.footer-container {
+  display: flex;
+  width: 1000px;
+  margin: 50px auto 0;
+  line-height: 4;
+  border-top: 1px solid white;
+}
+
+.footer-container ul {
+  display: flex;
+  grid-gap: 40px;
+  justify-items: center;
+  margin: auto;
+  list-style: none;
+}
+
+.footer-container ul li i {
+  color: var(--bg-third);
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.footer-container ul li a {
+  color: var(--font-main);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.footer-container ul li a:hover {
+  border-radius: 0.3rem;
+  background-color: var(--font-main);
+  color: var(--bg-main);
+}
+
+.footer-container ul li:hover~li p {
+  animation: wave-animation 0.3s infinite;
+}
+
+@keyframes wave-animation {
+
+  0%,
+  100% {
+      transform: rotate(0deg);
+  }
+
+  25% {
+      transform: rotate(20deg);
+  }
+
+  75% {
+      transform: rotate(-15deg);
+  }
+}
+
+@media only screen and (max-width:1115px) {
+  .footer-container {
+      width: 80%;
+  }
+}
+
+@media only screen and (max-width:960px) {
+  .footer-container {
+      width: 80%;
+  }
+}
+
+/* Footer */
