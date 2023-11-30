@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My BookShelf</title>
+  <!-- Link to Logo Icon -->
+  <link rel="icon" type="image/x-icon" href="assets/logoBook.png">
+  <!-- Link to External Styles -->
+  <link rel="stylesheet" href="styles/styles.css">  
+  <!-- Link to Font Awesome -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer">
+</head>
+<body>
+  <!-- Header Website -->
+  <header>
+    <div class="header-wrapper">
+      <!-- Background image -->
+      <div class="header-content">
+        <div class="header-title">
+          <h1>BookShelf App</h1>
+          <p>Are you tired of the confusion when organizing books you've read or those still on your list? 
+            Say hello to My BookShelf! Our app makes creating book collections a breeze. 
+            No need to worry about expensive bookshelves, let us handle it for you! 
+            We're here to make your days more productive and marvelous. 
+            Join us on this delightful journey!</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Main Page Website -->
+  <main class="container">
+    <section class="search-container">
+      <form id="search-book">
+        <div class="search">
+          <input id="search-book-title" type="search" placeholder="Search Book by Title">
+        </div>
+        <div class="select">
+          <select id="optional-search">
+            <option value="All">All</option>
+            <option value="Finished Read">Finished Read</option>
+            <option value="Unfinished Read">Unfinished Read</option>
+          </select>
+        </div>
+      </form>
+    </section>
+    <section class="main-content">
+      <div class="profile-add">
+        <div class="user-info my-container">
+          <div class="user-img">
+            <img src="assets/zildhan.jpg" alt="Profile Image">
+          </div>
+          <h2 id="user-name"></h2>
+          <p>
+            <i class="fa-regular fa-user"></i>
+            <span id="user-bio"></span>
+          </p>
+          <ul>
+            <li>
+              <p>Total Books</p>
+              <h4 id="jumlah-buku"></h4>
+            </li>
+          </ul>
+        </div>
+        <div class="my-container">
+          <button id="add-book" type="button" name="add-new-book">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="my-book-shelf">
+        <div class="welcome my-container">
+          <h2>Hi! Welcome to My BookShelf Apps</h2>
+          <p>Managing your books is now easier with My BookShelf. Let's try it!</p>
+        </div>
+        <div class="content-book">
+          <div class="book-shelf">
+            <h4 class="title">Unfinished Read</h4>
+            <div class="book-list" id="unfinished-book-list"></div>
+          </div>
+          <div class="book-shelf">
+            <h4 class="title">Finished Read</h4>
+            <div class="book-list" id="finished-book-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="formBook">
+      <div class="input_section">
+          <div class="title-input">
+              <h2>Add New Book</h2>
+              <span id="close"><i class="fa-solid fa-xmark"></i></span>
+          </div>
+          <form id="inputBook">
+              <div class="input">
+                  <input id="inputBookTitle" class="required" type="text" placeholder="Title" required />
+              </div>
+              <div class="input">
+                  <input id="inputBookAuthor" class="required" type="text" placeholder="Author" required />
+              </div>
+              <div class="input">
+                  <input id="inputBookYear" class="required" type="number" placeholder="Year" required />
+              </div>
+              <div class="input">
+                  <input id="inputBookCategory" class="required" type="text" placeholder="Category" required />
+              </div>
+              <div class="input_inline">
+                  <input id="inputBookIsComplete" type="checkbox" />
+                  <label for="inputBookIsComplete">Finished Reading</label>
+              </div>
+              <button id="bookSubmit" type="submit">Add Book</button>
+          </form>
+      </div>
+  </section>
+  </main>
+  <!-- Footer Website -->
+  <footer>
+    <div class="footer-container">
+      <ul>
+        <li>
+          <p>✨</p>
+        </li>
+        <li>
+          <i class="fa-brands fa-github"></i>
+          <span class="footer-title">
+            <a href="">zildhanfb08</a>
+          </span>
+        </li>
+        <li>
+          <i class="fa-brands fa-linkedin"></i>
+          <span class="footer-title">
+            <a href="">Raden Achmad Zildhan Frans Bestand</a>
+          </span>
+        </li>
+        <li>
+          <i class="fa-brands fa-instagram"></i>
+          <span class="footer-title">
+            <a href="">razfb05</a>
+          </span>
+        </li>
+        <li>
+          <i class="fa-brands fa-twitter"></i>
+          <span class="footer-title">
+            <a href="">achzil08</a>
+          </span>
+        </li>
+        <li>
+          <p>✨</p>
+        </li>
+      </ul>
+    </div>
+  </footer>
+    
+</body>
+</html>

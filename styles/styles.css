@@ -1,0 +1,50 @@
+/* Import Custom Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;800&display=swap');
+
+/* Root Variables */
+:root,
+::before,
+::after {
+  --bg-main: #e5e5f7;
+  --bg-second: #fafafd;
+  --bg-third: #eaf0f6;
+  --font-main: #49494c;
+  --font-second: #333333;
+  --fa-clear: #dd4e51;
+  --fa-edit: #6da6fc;
+  --fa-finished: #74d182;
+  --fa-unfinished: #febc67;
+  --shadow-main: #cbcbcb;
+  --shadow-second: #dadada;
+}
+/* Root Variables */
+
+/* General Declaring */
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  text-decoration: none;
+  list-style: none;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--font-main);
+  border-radius: 0.5rem;
+}
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  color: var(--font-main);
+  background: var(--bg-main);
+}
