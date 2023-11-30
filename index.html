@@ -22,7 +22,28 @@
   <header>
     <div class="header-wrapper">
       <!-- Background image -->
-      <div class="header-content">
+      <div class="header-slider">
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
+        <div class="header-slide"></div>
         <div class="header-title">
           <h1>BookShelf App</h1>
           <p>Are you tired of the confusion when organizing books you've read or those still on your list? 
@@ -35,20 +56,14 @@
     </div>
   </header>
   <!-- Main Page Website -->
-  <main class="container">
+  <main>
     <section class="search-container">
-      <form id="search-book">
-        <div class="search">
-          <input id="search-book-title" type="search" placeholder="Search Book by Title">
-        </div>
-        <div class="select">
-          <select id="optional-search">
-            <option value="All">All</option>
-            <option value="Finished Read">Finished Read</option>
-            <option value="Unfinished Read">Unfinished Read</option>
-          </select>
-        </div>
-      </form>
+      <input id="search-book-title" class="search" type="search" placeholder="Search Book by Title">
+      <select id="optional-search" class="select">
+        <option value="All">All</option>
+        <option value="Finished Read">Finished Read</option>
+        <option value="Unfinished Read">Unfinished Read</option>
+      </select>
     </section>
     <section class="main-content">
       <div class="profile-add">
@@ -56,28 +71,29 @@
           <div class="user-img">
             <img src="assets/zildhan.jpg" alt="Profile Image">
           </div>
-          <h2 id="user-name"></h2>
-          <p>
+          <h2 class="user-name">Raden Achmad Zildhan Frans Bestand</h2>
+          <p class="user-bio">
             <i class="fa-regular fa-user"></i>
-            <span id="user-bio"></span>
+            Web and Data Enthusiast
           </p>
           <ul>
             <li>
               <p>Total Books</p>
-              <h4 id="jumlah-buku"></h4>
+              <h4 id="jumlah-buku">0</h4>
             </li>
           </ul>
         </div>
-        <div class="my-container">
+        <div class="button-add">
           <button id="add-book" type="button" name="add-new-book">
             <i class="fa-solid fa-plus"></i>
+            <span>Add New Book</span>
           </button>
         </div>
       </div>
       <div class="my-book-shelf">
         <div class="welcome my-container">
-          <h2>Hi! Welcome to My BookShelf Apps</h2>
-          <p>Managing your books is now easier with My BookShelf. Let's try it!</p>
+          <h2 class="welcome-title">Hi! Welcome to My BookShelf Apps</h2>
+          <p class="welcome-text">Managing your books is now easier with My BookShelf. Let's try it!</p>
         </div>
         <div class="content-book">
           <div class="book-shelf">
@@ -91,28 +107,28 @@
         </div>
       </div>
     </section>
-    <section id="formBook">
-      <div class="input_section">
+    <section id="form-book">
+      <div class="input-section">
           <div class="title-input">
               <h2>Add New Book</h2>
               <span id="close"><i class="fa-solid fa-xmark"></i></span>
           </div>
-          <form id="inputBook">
+          <form id="input-book">
               <div class="input">
-                  <input id="inputBookTitle" class="required" type="text" placeholder="Title" required />
+                  <input id="input-book-title" class="required" type="text" placeholder="Title" required />
               </div>
               <div class="input">
-                  <input id="inputBookAuthor" class="required" type="text" placeholder="Author" required />
+                  <input id="input-book-author" class="required" type="text" placeholder="Author" required />
               </div>
               <div class="input">
-                  <input id="inputBookYear" class="required" type="number" placeholder="Year" required />
+                  <input id="input-book-year" class="required" type="number" placeholder="Year" required />
               </div>
               <div class="input">
-                  <input id="inputBookCategory" class="required" type="text" placeholder="Category" required />
+                  <input id="input-book-category" class="required" type="text" placeholder="Category" required />
               </div>
-              <div class="input_inline">
-                  <input id="inputBookIsComplete" type="checkbox" />
-                  <label for="inputBookIsComplete">Finished Reading</label>
+              <div class="input-inline">
+                  <input id="input-book-is-complete" type="checkbox" />
+                  <label for="input-book-is-complete">Finished Reading</label>
               </div>
               <button id="bookSubmit" type="submit">Add Book</button>
           </form>
@@ -157,5 +173,6 @@
     </div>
   </footer>
     
+  <script src="scripts/slider.js"></script>
 </body>
 </html>
