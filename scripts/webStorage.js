@@ -74,7 +74,7 @@ function clear() {
     document.getElementById('input-book-author').value = '';
     document.getElementById('input-book-year').value = '';
     document.getElementById('input-book-category').value = '';
-    document.getElementById('input-book-is-completed').checked = false;
+    document.getElementById('input-book-is-complete').checked = false;
     overlay.style.display = 'none';
 }
 

@@ -3,7 +3,7 @@ function addBook() {
     isEdit = false;
     const title = document.getElementById('input-book-title').value;
     const author = document.getElementById('input-book-author').value;
-    const year = document.getElementById('input-book-year').value;
+    const year = parseInt(document.getElementById('input-book-year').value);
     const category = document.getElementById('input-book-category').value;
     const isCompleted = document.getElementById('input-book-is-complete').checked;
 

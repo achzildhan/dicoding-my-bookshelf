@@ -16,7 +16,7 @@ function editBook(bookId) {
     const h2 = document.querySelector('.input-section .title-input h2');
     h2.innerText = 'Form Edit'
 
-    const editNameButton = document.getElementById('bookSubmit');
+    const editNameButton = document.getElementById('book-submit');
     editNameButton.innerText = 'Edit Book';
 }
 
@@ -25,7 +25,7 @@ function saveEditBook() {
     const getBookId = selectedEditBook[0].id;
     const title = document.getElementById('input-book-title').value;
     const author = document.getElementById('input-book-author').value;
-    const year = document.getElementById('input-book-year').value;
+    const year = Number(document.getElementById('input-book-year').value);
     const category = document.getElementById('input-book-category').value;
     const isCompleted = document.getElementById('input-book-is-complete').checked;
 
